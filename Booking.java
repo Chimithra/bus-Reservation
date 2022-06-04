@@ -8,6 +8,8 @@ public class Booking {
     String passengerName;
     int busNo;
     Date date;
+    String from;
+    String to;
     Booking(){
         Scanner in = new Scanner(System.in);
         System.out.println("Enter the Name : ");
@@ -22,6 +24,10 @@ public class Booking {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+        System.out.println("Where startsWith : ");
+        from = in.next();
+        System.out.println("Where endsWith : ");
+        to = in.next();
     }
     public boolean isAvailable(ArrayList<Booking> bookings,ArrayList<Bus>buses){
         int capacity = 0;
@@ -38,4 +44,12 @@ public class Booking {
         }
         return booked<capacity?true:false;
     }
+    void display(){
+        System.out.println("Passenger Name : "+ passengerName);
+        System.out.println("Bus No         : "+ busNo);
+        System.out.println("Date           : "+ date);
+        System.out.println("From           : "+ from);
+        System.out.println("To             : "+ to);
+    }
 }
+
