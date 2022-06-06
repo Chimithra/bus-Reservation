@@ -53,5 +53,6 @@ public class Bus {
         System.out.println("Seat Capacity : "+this.seatCapacity);
         System.out.println("StartsWith    : "+this.startsWith);
         System.out.println("EndsWith      : "+this.endsWith);
+        System.out.println("----------------------------------------");
     }
 }
